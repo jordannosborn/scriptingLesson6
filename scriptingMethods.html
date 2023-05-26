@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript string methods</title>
+</head>
+<body>
+    <h2>JavaScript string methods</h2>
+
+    <p>The slice() method extracts a part of a string and returns the extracted parts in a new string </p>
+
+    <p id="demo"></p>
+
+    <script> 
+        let str = "Apple, Banana, Kiwi"; 
+        let para = `the lazy fox jumped
+        over the blue cow`; 
+        let s1 = str.slice(7, 13); 
+        let email = prompt("Enter your email address: "); //joe.bloggs@studytafensw.edu.au 
+        let p1 = email.indexOf("@"); 
+        let p2 = email.lastIndexOf("."); 
+        let p3 = email.lastIndexOf(".", (p2-1));
+        let userName = email.slice(0,10); 
+        let domain = email.slice((p1 + 1), p3); //11, 23
+        let foundTafe = email.search("tafe"); 
+        let m1 = foundTafe <0 ? "'tafe' NOT in email" : "'tafe' is in email"; 
+        
+        let message = "Details"; 
+        message += "<br> str: "+ str; 
+        message += "<br> slice(7, 13) is: " +s1; 
+        message += "<br> email: "+ email; 
+        message += "<br> Position of @:" + p1; 
+        message += "<br> position of . counted from end of string is: "+ p2 +", and next . is " + p3;
+        message += "<br> Domain: " + domain; 
+        message += "<br>" + m1; 
+        message += "<br>Para:" + para; 
+        document.getElementById("demo").innerHTML = message;
+    </script>
+</body>
+</html>
